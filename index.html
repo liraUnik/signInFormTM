@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="shorcut icon"
+      href="https://cdn3.iconfinder.com/data/icons/arrowico/32/Side-Login-512.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/4824e55764.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign In prpject</title>
+  </head>
+  <body>
+    <!-- we neet to wrap around every think so we put a container on it ad id of container to target on javascript-->
+    <div id="container" class="container">
+      <!-- inside here we have 3 elements one for sign in ,sign up and overlay -->
+      <div class="form-container sign-up-container">
+        <!-- it is going to have just a form
+        who has 4 parts
+        1 type  of hwat is sing up an h1
+        2 pasibility of sing in wihth your diferent account like google fb etc
+        3 option warning with a span for yor account
+        4 input for create account with 3 inputs and sign up button -->
+        <form action="#">
+          <h1>Create Account</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social">
+              <i class="fab fa-google-plus-g"></i>
+            </a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email for registration</span>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <!-- it is going to have just a form
+        who has 4 parts
+        1 type  of hwat is sing up an h1
+        2 pasibility of sing in wihth your diferent account like google fb etc, and wrap around with social-container so to grab on css
+        3 option warning with a span for yor account
+        4 input for create account with 3 inputs and sign up button -->
+        <form action="#">
+          <h1>Sign In</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social">
+              <i class="fab fa-google-plus-g"></i>
+            </a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your account</span>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <a href="#">Forgat your password?</a>
+          <button>Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <!-- it is going to have two part
+            1 to overlay or dispaly the sing in form
+            2 to overlay or dispaly the sing up form
+        both part are wrapt in div with class of overlay to grab on css -->
+        <div class="overlay">
+          <!-- each div is going to have the info in which panel the are sing in or sing y=up with h1 p and the button to swetch between -->
+          <div class="overlay-panel overlay-left">
+            <h1>Wlcome Back!</h1>
+            <p>
+              To keep connected with us please login with your presonal info
+            </p>
+            <button class="gost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hellom Friend!</h1>
+            <p>Enter Your personal detalis and start journey with us</p>
+            <button class="gost" id="signUp"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
