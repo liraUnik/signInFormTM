@@ -84,7 +84,15 @@ a {
   height: 40px;
   width: 40px;
 }
-
+.social-container a:first-child {
+  background: #3b5998;
+}
+.social-container a:nth-child(2) {
+  background: rgb(221, 75, 57);
+}
+.social-container a:last-child {
+  background: #0077b5;
+}
 /* style the iput's give a space and expend horizontly */
 .form-container input {
   background: #eeeeee;
@@ -132,8 +140,6 @@ button.gost {
  */
 
 .form-container {
-  /* todo remove display none */
-  /* display: none; */
   position: absolute;
   top: 0;
   height: 100%;
@@ -143,8 +149,6 @@ button.gost {
 /* both sign in and sign Up is goint to stay in the same position but sign in is going to overlap the singup wihth z-index parameter */
 
 .sign-in-container {
-  /* todo remove display none */
-  /* display: none; */
   left: 0;
   width: 50%;
   z-index: 2;
@@ -202,4 +206,43 @@ button.gost {
 
 .overlay-left {
   transform: translateX(-20%);
+}
+
+/**
+ * animate  and transform 
+ */
+
+/* animation */
+
+/* move signin to the right */
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+/* move overlay to left */
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+/* bring sign up over sign in  */
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* move overly back to right */
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
 }
