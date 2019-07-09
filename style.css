@@ -122,7 +122,84 @@ button:hover {
   color: #333333;
 }
 
-button.ghost {
+button.gost {
   background: transparent;
   border-color: #ffffff;
+}
+
+/**
+ * individual conteiner start from form container
+ */
+
+.form-container {
+  /* todo remove display none */
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+/* both sign in and sign Up is goint to stay in the same position but sign in is going to overlap the singup wihth z-index parameter */
+
+.sign-in-container {
+  /* todo remove display none */
+  /* display: none; */
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  z-index: 1;
+  opacity: 0; /** to make invisible  and turns on from javascript */
+}
+
+/* push the overlay content to the right */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay {
+  background: #ff416c;
+  background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+/* style the panel */
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-right {
+  right: 0;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
 }
